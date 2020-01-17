@@ -1,0 +1,4 @@
++ cd /pylon1/ss4s81p/ruiyma/
++ cd run_02_wwvvSi3Ge1Nk80
++ matlab -nodisplay -nodesktop -nosplash
+/var/slurmd/job618301/slurm_script: line 27: Paper1st_Frequency_deendAnalysis_Nparts.m: No such file or directory

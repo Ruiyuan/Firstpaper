@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -J Freq_SI3
+#SBATCH -p GPU_100
+#SBATCH --ntasks-per-node 8
+#SBATCH -t 24:00:00
+#SBATCH --mail-user=ruiyma@seas.upenn.edu
+#SBATCH --mail-type=ALL
+#SBATCH --gres=gpu:2
+# echo commands to stdout 
+set -x
+
+# move to working directory
+cd /pylon1/ss4s81p/ruiyma/
+# copy input file to working directory
+# cp /pylon2/groupname/username/input.data .
+
+# run OpenMP program
+# export OMP_NUM_THREADS=28
+# ./myopenmp
+
+# copy output file to persistent space
+#cp output.data /pylon2/groupname/username
+
+# cp -r $HOME/run_01_1stPaperFrequencyDependent . && \
+    cd run_02_wwvvSi3Ge1Nk80 && \
+    matlab -nodisplay -nodesktop -nosplash < Paper1st_Frequency_deendAnalysis_Nparts.m
